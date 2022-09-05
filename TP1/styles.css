@@ -1,0 +1,43 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(99, 79, 199);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(99, 79, 199);
+}
+
+li, li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+  
+li a:hover {
+    background-color: black;
+}
+
+.content {
+    text-align: center;
+    padding: 40px;
+}
+
+.footer {
+    position: fixed;
+    text-align: center;
+    bottom: 3%;
+    width: 100%;
+    font-size: small;
+}
