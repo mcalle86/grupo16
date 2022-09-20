@@ -1,0 +1,67 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+	width: 100%;
+    min-height: 100;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas: "header header header"
+						 "content content content";
+}
+
+.container .header {
+	background: #7215a4;
+	color: #fff;
+	grid-area: header;
+}
+
+.container .content {
+	grid-area: content;
+}
+
+.container .footer {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+	color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.menu{
+    display: flex; 
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content: center;
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+}
+
+.menu > a{
+    margin: 20px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+.menu > a:hover{
+    margin: 20px;
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 768px){
+	.container {
+		grid-template-areas: "header header header"
+						 "content content content";
+	}
+}
