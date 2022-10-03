@@ -1,0 +1,255 @@
+
+body,html {
+    font-family: 'Montserrat', sans-serif !important;
+    height: 100%;
+    margin:0;
+}
+.section1 {
+    background-image: url("images/home.jpg");
+    height: 100%;
+    position: relative;
+    opacity: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-header {
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container-header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 2em;
+}
+
+nav a {
+    text-decoration: none;    
+}
+
+nav a:hover, nav a:focus {
+  color: #6e988f;
+  animation-name: animation-mouse-over;
+  animation-duration: 0.5s;
+  font-size: 1.05rem;
+}
+
+.section2 {
+    background-color: whitesmoke;
+	width: 100%;
+    min-height: 250px;
+    padding-top: 10px;
+	margin: auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: "content content content";
+}
+
+.content {
+	grid-area: content;
+    text-align: center;
+    margin: 5%;
+}
+
+.item1 { grid-area: item1; color: white;}
+.item2 { grid-area: item2; color: white;}
+.item3 { grid-area: item3; color: white;}
+.item4 { grid-area: item4; color: white;}
+.item5 { grid-area: item5; color: white;}
+.item6 { grid-area: item6; color: white;}
+
+
+.section3 {
+    display: grid;
+    grid-template-areas:
+        'item1 item2 item3'
+        'item4 item5 item6';
+    gap: 10px;
+    background-color:#1d1d21;
+    padding: 10px;
+}
+
+.section3 > div {
+    text-align: center;
+    padding: 20px 0;
+    margin: 5%;
+}
+
+.section3-titles {
+    font-size: 1.2rem;
+    margin: 10px;
+    color: #6e988f;
+    padding:10px;
+}
+
+
+.section4 {
+    background-color: whitesmoke;
+	width: 100%;
+    min-height: 250px;
+    padding: 50px;
+	margin: auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: 'content content content content content'
+                         'client1 client2 client3 client4 client5';
+    align-items: center;
+    text-align: center;
+}
+
+.section4 img{
+    width: 120px;
+}
+
+.client1 { grid-area: client1; text-align: center;}
+.client2 { grid-area: client2; text-align: center;}
+.client3 { grid-area: client3; text-align: center;}
+.client4 { grid-area: client4; text-align: center;}
+.client5 { grid-area: client5; text-align: center;}
+
+.section5 {
+    background-color:#1d1d21;
+	width: 100%;
+    min-height: 250px;
+    padding: 10px;
+	margin: auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: 'content content content';
+}
+
+h2 { 
+    color: #6e988f;
+    margin: 0px;
+}
+
+  
+nav a {
+    font-size: 1rem;
+    color: #f9f8eb;
+    text-transform: uppercase;
+}
+
+.contact {
+    width: 100%;
+    padding: 20px;
+}
+
+.contact label {
+    color: white;
+}
+
+.contact input {
+    margin-top: 10px;
+    background: #6e988f;
+    caret-color: #fff;
+    border: 1px solid #6e988f;
+}
+
+.contact textarea {
+    margin-top: 10px;
+    background: #6e988f;
+    caret-color: #fff;
+    border: 1px solid #6e988f;
+}
+
+.contact input:focus {
+    margin-top: 10px;
+    color: #fff;
+    background: #6e988f;
+    border: 1px solid #6e988f;
+}
+
+.contact textarea:focus {
+    margin-top: 10px;
+    color: #fff;
+    background: #6e988f;
+    border: 1px solid #6e988f;
+}
+
+
+.contact input::placeholder { 
+   color:    #fff;
+    font-weight: 500;
+}
+
+
+.contact textarea::placeholder { 
+   color:    #fff;
+    font-weight: 500;
+}
+
+
+@media screen and (max-width: 768px){
+	.container {
+		grid-template-areas: "header header header"
+						 "content content content";
+	}
+
+    .logo {
+        width: 150px;
+        padding-bottom: 20px;
+    }
+
+    .container-header {
+      text-align: center;
+    }
+    
+    .container-header-nav {
+      flex-direction: column;
+    }
+      
+    nav ul {
+        flex-direction: column;
+        font-size: 0.3rem;
+    }
+      
+    nav li {
+        margin: 0.3em 0;
+    }
+
+    .section3 {
+        grid-template-areas:
+            'item1 item2'
+            'item3 item4'
+            'item5 item6';
+    }
+
+    .section4{
+        grid-template-areas:
+            'content content content content'
+            'client1 client2 client3 client4'
+            'client5 client5 client5 client5';
+        align-items: center;
+        text-align: center;
+        justify-content: center;     
+    }
+
+    .section4 img{
+        width: 80px;
+    }
+
+}
+
+@keyframes animation-mouse-over {
+    from {font-size: 1rem;}
+    to {font-size: 1.05rem;}
+}
+
