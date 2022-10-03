@@ -128,7 +128,7 @@ nav a:hover, nav a:focus {
     background-color:#1d1d21;
 	width: 100%;
     min-height: 250px;
-    padding-top: 10px;
+    padding: 10px;
 	margin: auto;
 	display: grid;
 	grid-gap: 20px;
@@ -232,8 +232,18 @@ nav a {
             'item5 item6';
     }
 
+    .section4{
+        grid-template-areas:
+            'content content content content'
+            'client1 client2 client3 client4'
+            'client5 client5 client5 client5';
+        align-items: center;
+        text-align: center;
+        justify-content: center;     
+    }
+
     .section4 img{
-        width: 60px;
+        width: 80px;
     }
 
 }
