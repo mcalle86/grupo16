@@ -1,23 +1,21 @@
 
-body,html {
+html, body {
     font-family: 'Montserrat', sans-serif !important;
     height: 100%;
     margin:0;
 }
-.section1 {
-    background-image: url("images/home.jpg");
-    height: 100%;
-    position: relative;
-    opacity: 1;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
+/* Menú */
 .container-header {
+    /* navbar fixed top*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color:#1d1d21;
     padding: 20px;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+
 }
 
 .container-header-nav {
@@ -50,12 +48,23 @@ nav a:hover, nav a:focus {
   animation-duration: 0.5s;
   font-size: 1.05rem;
 }
+.section1 {
+    background-image: url("images/home.jpg");
+    height: 100%;
+    position: relative;
+    opacity: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+}
 
 .section2 {
     background-color: whitesmoke;
 	width: 100%;
-    min-height: 250px;
-    padding-top: 10px;
+    /* min-height: 250px; */
+    min-height: 100%;
+    padding-top: 60px;
 	margin: auto;
 	display: grid;
 	grid-gap: 20px;
@@ -77,13 +86,14 @@ nav a:hover, nav a:focus {
 
 
 .section3 {
+    min-height: 100%;
     display: grid;
     grid-template-areas:
         'item1 item2 item3'
         'item4 item5 item6';
     gap: 10px;
     background-color:#1d1d21;
-    padding: 10px;
+    padding: 60px;
 }
 
 .section3 > div {
@@ -103,8 +113,9 @@ nav a:hover, nav a:focus {
 .section4 {
     background-color: whitesmoke;
 	width: 100%;
-    min-height: 250px;
-    padding: 50px;
+    /* min-height: 250px; */
+    min-height: 100%;
+    padding: 60px;
 	margin: auto;
 	display: grid;
 	grid-gap: 20px;
@@ -127,8 +138,9 @@ nav a:hover, nav a:focus {
 .section5 {
     background-color:#1d1d21;
 	width: 100%;
-    min-height: 250px;
-    padding: 10px;
+    /* min-height: 250px; */
+    min-height: 100%;
+    padding: 60px;
 	margin: auto;
 	display: grid;
 	grid-gap: 20px;
@@ -212,6 +224,7 @@ nav a {
       text-align: center;
     }
     
+    /* Menu */
     .container-header-nav {
       flex-direction: column;
     }
