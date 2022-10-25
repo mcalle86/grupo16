@@ -44,6 +44,7 @@
 
     <section id="home">
         <div class="home-container">
+        <p id="direccion_ip">Su dirección IP es:  </p> 
         </div>
     </section>
 
@@ -186,10 +187,10 @@
                 (function () {
                     'use strict'
 
-                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    // Obtener todos los campos que requieren validacion
                     var forms = document.querySelectorAll('.needs-validation')
 
-                    // Loop over them and prevent submission
+                    // Evita que se envie el formulario si alguno de los campos esta vacio
                     Array.prototype.slice.call(forms)
                         .forEach(function (form) {
                             form.addEventListener('submit', function (event) {
@@ -202,6 +203,13 @@
                             }, false)
                         })
                 })()
+                // Consumo de API para obtener la direccion IP publica del cliente
+                fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    direccion_ip.innerHTML += data.ip;
+                });
             </script>
         </div>
     </section>
