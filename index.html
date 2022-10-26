@@ -44,7 +44,7 @@
 
     <section id="home">
         <div class="home-container">
-        <p id="direccion_ip">Su dirección IP es:  </p> 
+            <p id="direccion_ip">Su dirección IP es:  </p> 
         </div>
     </section>
 
@@ -203,6 +203,8 @@
                             }, false)
                         })
                 })()
+            </script>
+            <script>
                 // Consumo de API para obtener la direccion IP publica del cliente
                 fetch('https://api.ipify.org?format=json')
                 .then(response => response.json())

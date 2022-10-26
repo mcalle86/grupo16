@@ -1,5 +1,4 @@
 *, *::after, *::before {
-  /* box-sizing: border-box; */
   padding: 0;
   margin: 0;
 }
@@ -15,7 +14,6 @@ body {
 }
 
 .container {
-  /* max-width: 1200px; */
   width: 90%;
   margin: auto;
   height: 100vh;
@@ -79,7 +77,6 @@ body {
 /* HOME */
 #home{
   background: url("images/home.jpg");
-  /* height: 100vh; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -133,8 +130,6 @@ body {
 #servicios {
   display: flex;
   background-color:#1d1d21;
-  /* width: 100%; */
-  /* height: 100vh; */
   padding-top: 100px;
 }
 
@@ -155,7 +150,7 @@ body {
   margin-bottom: 48px;
 }
 .servicios-title{
-  font-size: 20px;
+  font-size: 40px;
   margin: 10px;
   color: #6e988f;
   padding:10px;
@@ -173,7 +168,7 @@ body {
 #clientes {
   background-color: whitesmoke;
 	width: 100%;
-  /* height: 100vh; */
+  height: 100vh;
   padding-top: 100px;
 	margin: auto;
 }
@@ -182,14 +177,13 @@ body {
   display: inline-grid;
   grid-template-columns: auto auto auto auto auto;
   grid-gap: 20px;
-  /* width: 120px; */
   height: 100vh;
   margin: 5%;
 }
 
 .clientes-title{
   text-align: center;
-  font-size: 35px;
+  font-size: 40px;
   margin: 10px;
   color: #6e988f;
   padding:10px;
@@ -222,7 +216,7 @@ body {
 
 .contactenos-title{
   text-align: center;
-  font-size: 25px;
+  font-size: 40px;
   margin: 10px;
   color: #6e988f;
   padding:10px;
@@ -281,7 +275,7 @@ body {
 
 /* corte hasta 768px */
 
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
   .navbar {
     height: 50px;
     margin: auto;
@@ -391,20 +385,17 @@ body {
 
   #home{
     display: flex;
-    background: url("images/home-tablet-portrait.jpg");
-    /* height: 100vh; */
-    background-size: cover;
+    background: url("images/home-tablet-portrait2.jpg");
+    background-size: 500px 550px;
     background-position: center;
     background-repeat: no-repeat;
   }
 
   .home-container {
-    /* padding:5px; */
-    /* flex-direction: column; */
     align-items: right;
     justify-content: right;
     height: 100vh;
-
+    padding: 50px;
   }
 
   #servicios{
@@ -433,22 +424,44 @@ body {
     color: rgb(240, 240, 240);
   }
 
+  #clientes{
+    height: 100vh;
+    padding-top: 50px
+  }
   .clientes-container {
     display: flex;
     max-width: 768px;
-    /* height: 100vh; */
-    /* width: 120px; */
-    align-items: center;
+    max-height: 70vh;
+    width: -webkit-fill-available;
     text-align: center;
     justify-content: center; 
     margin: auto;
     flex-wrap: wrap;
-    height: 100vh;
   }
-
+  .clientes-title{
+    font-size: 25px;
+    padding: -1px;
+  }
   .clientes-item {
-    padding: 10px;
+    padding: 5px;
     font-size: 50%;
     text-align: center;
+    height: 0vh;
+  }
+  .clientes-container img{
+    width: 100px;
+  }
+}
+
+/* corte hasta 400px */
+@media screen and (max-width: 400px) {
+  .quienessomos-title{
+    font-size: 25px;
+  }
+  .clientes-title{
+    font-size: 25px;
+  }
+  .contactenos-title{
+    font-size: 25px;
   }
 }
