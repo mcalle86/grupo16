@@ -1,4 +1,5 @@
 *, *::after, *::before {
+  /* box-sizing: border-box; */
   padding: 0;
   margin: 0;
 }
@@ -10,7 +11,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background:#1d1d21;
+  background:#16181d;
 }
 
 .container {
@@ -31,7 +32,7 @@ body {
 .navbar {
   position: fixed;
   width: 100%;
-  background:#1d1d21;
+  background:#16181d;
   height: 80px;
   margin: 0 auto;
   z-index: 2;
@@ -80,6 +81,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
 }
 .home-container {
   padding:80px;
@@ -203,14 +205,14 @@ body {
 #contactenos {
   background-color: #1d1d21;
   text-align: center;
-	width: 100%;
-  height: 100vh;
-  padding-top: 60px;
-	margin: auto;
+	/* width: 100%;
+  height: 100vh; */
+  padding: 60px;
+	/* margin: auto; */
 }
 
 .contactenos-container {
-  width: 70%;
+  /* width: 70%; */
   margin: auto;
 }
 
@@ -275,7 +277,7 @@ body {
 
 /* corte hasta 768px */
 
-@media screen and (max-width: 768px){
+@media  (max-width: 1024px){
   .navbar {
     height: 50px;
     margin: auto;
