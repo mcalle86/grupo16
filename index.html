@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <title>Stat Wise</title>
     <meta charset="UTF-8">
@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- Archivos CSS -->
     <link rel="stylesheet" href="styles.css">
-    <!-- <link rel="stylesheet" href="styles-media.css"> -->
+
 </head>
 <body>
     <nav class="navbar">
@@ -150,31 +150,23 @@
     <section id="contactenos">
         <div class="contactenos-title">CONTÁCTENOS</div>
         <div class="contactenos-container">
-            <form id="form-contactenos" class="row g-3 needs-validation" action="https://formspree.io/f/xoqbklbl" novalidate method="post">
+            <form id="form-contactenos" class="row g-3 needs-validation" action="https://formspree.io/f/xoqbklbl" method="post">
                 <div class="col-md-4">
                     <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" required>
-                    <div class="invalid-feedback">
-                        Complete aquí por favor.
-                    </div>
+
                 </div>
                 <div class="col-md-4">
                     <input class="form-control" type="text" id="company" name="company" placeholder="Empresa" required>
-                    <div class="invalid-feedback">
-                        Complete aquí por favor.
-                    </div>
+
                 </div>
                 <div class="col-md-4">
                     <!-- Se utiliza el atributo pattern para validar que la direccion de correo electrónico tenga formato ejemplo@dominio.com -->
                     <input class="form-control" type="email" name="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-                    <div class="invalid-feedback">
-                        Complete aquí por favor.
-                    </div>
+
                 </div>
                 <div class="col-12">
                     <textarea class="form-control" name="consulta" id="consulta" rows="7" placeholder="Escriba aquí su consulta..." required></textarea>
-                    <div class="invalid-feedback">
-                        Complete aquí por favor.
-                    </div>
+
                 </div>
                 
                 <div class="col-12">
@@ -183,29 +175,17 @@
                 </div>
                 <p id="estado-formulario"></p>
             </form>
+
             <script>
-                //validar que ningun campo este vacio
-                (function () {
-                    'use strict'
 
-                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                    var forms = document.querySelectorAll('.needs-validation')
-
-                    // Loop over them and prevent submission
-                    Array.prototype.slice.call(forms)
-                        .forEach(function (form) {
-                            form.addEventListener('submit', function (event) {
-                                if (!form.checkValidity()) {
-                                    event.preventDefault()
-                                    event.stopPropagation()
-                                }
-                                form.classList.add('was-validated')
-                            }, false)
-                        })
-                })()
-
-            </script>
-            <!-- <script>
+                function sleep(milisegundos) {
+                    var start = new Date().getTime();
+                    for (var i = 0; i < 1e7; i++) {
+                            if ((new Date().getTime() - start) > milisegundos) {
+                                break;
+                            }
+                        }
+                }
                 // Envio de mail por formspree
                 var form = document.getElementById("form-contactenos");
                 
@@ -221,23 +201,21 @@
                     }
                   }).then(response => {
                     if (response.ok) {
-                      status.innerHTML = "Thanks for your submission!";
-                      form.reset()
-                    } else {
-                      response.json().then(data => {
-                        if (Object.hasOwn(data, 'errors')) {
-                          status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-                        } else {
-                          status.innerHTML = "Oops! There was a problem submitting your form"
-                        }
-                      })
+                      status.innerHTML = "Gracias por contactarnos, le responderemos a la brevedad.";
+                      setTimeout(() => { status.innerHTML = ""; }, 3000);
+                      form.reset();
+                      
+                    } else {               
+                        response.json().then(data => {         
+                        status.innerHTML = "Por favor complete todos los campos."
+                        })
                     }
-                  }).catch(error => {
-                    status.innerHTML = "Oops! There was a problem submitting your form"
-                  });
+                    }).catch(error => {
+                        status.innerHTML = "Por favor complete todos los campos."
+                    });
                 }
                 form.addEventListener("submit", handleSubmit)
-            </script> -->
+            </script>
             <script>
                 // Consumo de API para obtener la direccion IP publica del cliente
                 fetch('https://api.ipify.org?format=json')

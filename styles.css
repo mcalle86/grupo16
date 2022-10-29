@@ -205,10 +205,10 @@ body {
 #contactenos {
   background-color: #1d1d21;
   text-align: center;
-	/* width: 100%;
-  height: 100vh; */
-  padding: 60px;
-	/* margin: auto; */
+	/* width: 100%;*/
+  height: 100vh; 
+  padding: 70px;
+	margin: auto;
 }
 
 .contactenos-container {
@@ -274,8 +274,12 @@ body {
   font-size: 9px;
   color: #dc3545;
 }
+.contactenos-container p{
+  color: #fff;
+  font-weight: 500;
+}
 
-/* corte hasta 768px */
+/* corte hasta 1024px */
 
 @media  (max-width: 1024px){
   .navbar {
